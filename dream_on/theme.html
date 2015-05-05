@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table cellspacing="1" cellpadding="0" class="outline">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td style="background-image:url(<{$xoops_imageurl}>images/l_b.gif);background-repeat:repeat-y;width:170px;">&nbsp;</td>
+<td width="599" style="text-align:center"><a href="<{$xoops_url}>">
+<img src="<{$xoops_imageurl}>images/bgg.gif" alt="hello!" align="middle" /></a></td>
+<td style="background-image:url(<{$xoops_imageurl}>images/r_b.gif);background-repeat:repeat-y;background-position:right;width:170px;">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="bar">&nbsp;</td></tr>
+<tr>
+<td bgcolor="#FFFFFF">
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td width="170" class="l">
+<!-- Start left blocks loop -->
+<{foreach item=block from=$xoops_lblocks}>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td class="blockTitle">&nbsp;<{$block.title}></td>
+</tr>
+<tr>
+<td class="blockContent"><{$block.content}></td>
+</tr>
+</table>
+<{/foreach}>
+<!-- End left blocks loop -->
+</td>
+<td style="padding: 0px 5px 0px;" align="center">
+<!-- Display center blocks if any -->
+<{if $xoops_showcblock == 1}>
+<table cellspacing="0">
+<tr>
+<td width="100%" colspan="2">
+<hr>
+<!-- Start center-center blocks loop -->
+<{foreach item=block from=$xoops_ccblocks}>
+<table cellspacing="0" cellpadding="5">
+<tr> 
+<td class="blockTitle2">&nbsp;<{$block.title}></td>
+</tr>
+<tr>
+<td class="blockContent2"><{$block.content}></td>
+</tr>
+</table><br />
+<{/foreach}>
+<!-- End center-center blocks loop -->
+<hr>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<!-- Start center-left blocks loop -->
+<{foreach item=block from=$xoops_clblocks}>
+<table cellspacing="0" cellpadding="5">
+<tr> 
+<td class="blockTitle2">&nbsp;<{$block.title}></td>
+</tr>
+<tr>
+<td class="blockContent2"><{$block.content}></td>
+</tr>
+</table><br />
+<{/foreach}>
+<!-- End center-left blocks loop -->
+</td><td width="50%">
+<!-- Start center-right blocks loop -->
+<{foreach item=block from=$xoops_crblocks}>
+<table cellspacing="0" cellpadding="5">
+<tr> 
+<td class="blockTitle2">&nbsp;<{$block.title}></td>
+</tr>
+<tr>
+<td class="blockContent2"><{$block.content}></td>
+</tr>
+</table><br />
+<{/foreach}>
+<!-- End center-right blocks loop -->
+</td>
+</tr>
+</table>
+<{/if}>
+<!-- End display center blocks -->
+<div id="content">
+<{$xoops_contents}>
+</div>
+</td>
+<{if $xoops_showrblock == 1}>
+<td width="170" class="r">
+<!-- Start right blocks loop -->
+<{foreach item=block from=$xoops_rblocks}>
+<table cellspacing="0" cellpadding="2">
+<tr>
+<td class="blockTitle">&nbsp;<{$block.title}></td>
+</tr>
+<tr>
+<td class="blockContent"><{$block.content}></td>
+</tr>
+</table>
+<br />
+<{/foreach}>
+<!-- End right blocks loop -->
+<{/if}>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="middle" align="center" class="bar"><div style="text-align: center; padding-top: 2px; font-size: 10px"><{$xoops_footer}></div></td>
+</tr>
+</table>
+</body>
+</html>
